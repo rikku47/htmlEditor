@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#editor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: max-content auto max-content;
+    grid-template-areas:
+        "header header header header"
+        "main main main sidebar"
+        "footer footer footer footer";
+    height: 100%;
+}
+
+#header {
+    grid-area: header;
+}
+
+#header-menu .tabs {
+    display: flex;
+    list-style-type: none;
+}
+
+#main {
+    grid-area: main;
+}
+
+#file-tab-menu .tabs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    position: relative;
+}
+
+#sidebar-menu .tabs {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.tab {
+    width: 25%;
+}
+
+.tab-name {
+    line-height: 3rem;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+#properties-meta>form {
+    display: flex;
+    flex-direction: column;
+}
+
+#file-list {
+    display: none;
+    overflow: scroll;
+    width: 100%;
+}
+
+#footer {
+    grid-area: footer;
+}
+
+#file-list {
+    position: absolute;
+}
+
+#metas {
+    position: absolute;
+}
+
+#renderer {
+    grid-area: main;
+}
+
+tr.header {
+    background-color: #001126;
+}
+
+tr {
+    background-color: #14283b;
+    color: white;
+}
+
+tr:hover {
+    background-color: #001126;
+    cursor: pointer;
+}

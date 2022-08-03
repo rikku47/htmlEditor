@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self'">
+    <title>RuleTheWord</title>
+    <link rel="stylesheet"
+          href="css/style.css" />
+</head>
+<body>
+    <div id="editor">
+        <div id="header">
+            <div id="header-menu">
+                <ul class="tabs">
+                    <li class="tab">
+                        <a class="tab-name"
+                           id="tab-open-files">Open Files</a>
+                    </li>
+                    <li class="tab">
+                        <a class="tab-name"
+                           id="tab-save-files">Save Files</a>
+                    </li>
+                    <li class="tab">
+                        <a class="tab-name"
+                           id="tab-edit">Edit</a>
+                    </li>
+                    <li class="tab">
+                        <a class="tab-name"
+                           id="tab-view">View</a>
+                    </li>
+                    <li class="tab">
+                        <a class="tab-name"
+                           id="tab-help">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div id="file-tab-menu">
+                <ul class="tabs"></ul>
+            </div>
+            <div id="renderer">
+
+            </div>
+        </div>
+        <div id="sidebar">
+            <div id="sidebar-menu">
+                <ul class="tabs">
+                    <li class="tab">
+                        <a class="tab-name"
+                           id="tab-meta">Meta</a>
+                    </li>
+                    <li class="tab">
+                        <a class="tab-name"
+                           id="tab-files">Files</a>
+                    </li>
+                    <li class="tab">
+                        <a class="tab-name"
+                           id="tab-grid">Grid</a>
+                    </li>
+                    <li class="tab">
+                        <a class="tab-name"
+                           id="tab-style">Style</a>
+                    </li>
+                    <li class="tab">
+                        <a class="tab-name"
+                           id="tab-additional">Additionel</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="properties">
+                <div id="properties-meta">
+                    <form>
+                        <label for="language">Language</label>
+                        <select id="language">
+                            <option value="de">german</option>
+                            <option value="en">english</option>
+                        </select>
+                        <label for="charset">Charset</label>
+                        <select id="charset">
+                            <option value="UTF-8">UTF-8</option>
+                        </select>
+                        <label for="description">Description</label>
+                        <input id="description"
+                               type="text"
+                               placeholder="My blog is about music!" />
+                        <label for="keywords">keywords</label>
+                        <input id="keywords"
+                               type="text"
+                               placeholder="music, synthesizer, notes, sine" />
+                        <label for="author">author</label>
+                        <input id="author"
+                               type="text"
+                               placeholder="Kai Friebe" />
+                        <label for="title">Title</label>
+                        <input id="title"
+                               type="text"
+                               placeholder="Music - World" />
+                    </form>
+                </div>
+                <div id="file-list">
+                    <table id="table">
+                        <thead>
+                            <tr>
+                                <th>atime</th>
+                                <th>atimeMs</th>
+                                <th>birthtime</th>
+                                <th>birthtimeMs</th>
+                                <th>blksize</th>
+                                <th>blocks</th>
+                                <th>ctime</th>
+                                <th>ctimeMs</th>
+                                <th>dev</th>
+                                <th>gid</th>
+                                <th>ino</th>
+                                <th>length</th>
+                                <th>mode</th>
+                                <th>mtime</th>
+                                <th>mtimeMs</th>
+                                <th>nlink</th>
+                                <th>rdev</th>
+                                <th>size</th>
+                                <th>uid</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <h1>Go up!</h1>
+        </div>
+    </div>
+    <script src="renderer/renderer.js"></script>
+</body>
+</html>
